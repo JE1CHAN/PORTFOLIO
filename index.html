@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Cal+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=BBH+Bartle&family=Cal+Sans&display=swap" rel="stylesheet">
 
+    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
@@ -50,21 +51,21 @@
     <!-- Home Section -->
     <section id="home">
         <div class="container home-content">
-            <!-- Image Section (Left) -->
-            <div class="home-img reveal">
+            <!-- Image Section (Left) - Fades in from Right -->
+            <div class="home-img" data-aos="fade-right" data-aos-duration="1000">
                 <div class="tilt-box">
                     <div class="tilt-card">
-                        <img src="assets/me.png" alt="Profile Photo" onerror="this.src='https:/via.placeholder.com/400?text=Photo';">
+                        <img src="assets/me.png" alt="Profile Photo" onerror="this.src='https://via.placeholder.com/400?text=Photo';">
                     </div>
                 </div>
             </div>
 
-            <!-- Text Section (Right) -->
-            <div class="home-text reveal">
+            <!-- Text Section (Right) - Fades in from Left -->
+            <div class="home-text" data-aos="fade-left" data-aos-duration="1000">
                 <h1 style="font-size: 8rem;">Hello, I'm <span style="color: var(--accent);">Christian Jay Matres</span></h1>
                 <h2>Web Developer | Artist | Graphic Designer | IT Student</h2>
                 <p>"Creativity takes courage." – Henri Matisse.</p>
-                <a href="#projects" class="btn">View My Work</a>
+                <a href="#projects" class="btn">View My Work</a>    
             </div>
         </div>
     </section>
@@ -72,14 +73,14 @@
     <!-- About Section -->
     <section id="about">
         <div class="container">
-            <h2 class="section-title reveal">About Me</h2>
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
             
-            <!-- Group 1: [Photo] - [Text] -->
-            <div class="about-group reveal">
-                <div class="about-photo-card">
+            <!-- Group 1: [Photo Left] - [Text Right] -->
+            <div class="about-group">
+                <div class="about-photo-card" data-aos="fade-right">
                     <img src="assets/DMC.jpg" alt="DMC Artwork" onerror="this.src='https://via.placeholder.com/600x400?text=DMC+Image';">
                 </div>
-                <div class="about-desc">
+                <div class="about-desc" data-aos="fade-left">
                     <h3>DMC Creatives</h3>
                     <p>
                         My journey in digital media is built on hands-on experience and a passion for storytelling. I have served as a Production Assistant at the DMC for nearly a year, refining my workflow in professional production environments.
@@ -87,12 +88,12 @@
                 </div>
             </div>
 
-            <!-- Group 2: [Text] - [Photo] (Handled by CSS :nth-of-type(even)) -->
-            <div class="about-group reveal">
-                <div class="about-photo-card">
+            <!-- Group 2: [Text Left] - [Photo Right] (Visually swapped by CSS) -->
+            <div class="about-group">
+                <div class="about-photo-card" data-aos="fade-left">
                     <img src="assets/DMC2.jpg" alt="DMC Project 2" onerror="this.src='https://via.placeholder.com/600x400?text=DMC+2';">
                 </div>
-                <div class="about-desc">
+                <div class="about-desc" data-aos="fade-right">
                     <h3>Behind The Lens</h3>
                     <p>
                         I don't just consume content; I create it. Beyond the studio, I specialize in capturing the raw emotion of live events—serving as a second shooter for weddings and a dedicated event photographer. These roles have sharpened my eye for detail, composition, and the art of visual narrative.
@@ -100,12 +101,12 @@
                 </div>
             </div>
 
-            <!-- Group 3: [Photo] - [Text] -->
-            <div class="about-group reveal">
-                <div class="about-photo-card">
-                    <img src="assets/aaa.jpg" alt="Placeholder 1">
+            <!-- Group 3: [Photo Left] - [Text Right] -->
+            <div class="about-group">
+                <div class="about-photo-card" data-aos="fade-right">
+                    <img src="assets/aaa.jpg" alt="Graphic Design Work" onerror="this.src='https://via.placeholder.com/600x400?text=Graphic+Design';">
                 </div>
-                <div class="about-desc">
+                <div class="about-desc" data-aos="fade-left">
                     <h3>Graphic Design & Branding</h3>
                     <p>
                         Beyond simple image manipulation, I focus on cohesive branding and layout design. 
@@ -114,12 +115,12 @@
                 </div>
             </div>
 
-            <!-- Group 4: [Text] - [Photo] -->
-            <div class="about-group reveal">
-                <div class="about-photo-card">
-                    <img src="assets/art.jpg" alt="Placeholder 2">
+            <!-- Group 4: [Text Left] - [Photo Right] -->
+            <div class="about-group">
+                <div class="about-photo-card" data-aos="fade-left">
+                    <img src="assets/art.jpg" alt="Digital Art" onerror="this.src='https://via.placeholder.com/600x400?text=Digital+Art';">
                 </div>
-                <div class="about-desc">
+                <div class="about-desc" data-aos="fade-right">
                     <h3>Digital Artistry & Illustration</h3>
                     <p>
                         The digital canvas is my playground. I specialize in transforming abstract concepts into vibrant visual realities. Whether creating character designs, concept art, or detailed illustrations, I use industry-standard tools to craft visuals that capture imagination and communicate ideas where words fall short.
@@ -127,11 +128,12 @@
                 </div>
             </div>
 
-            <div class="about-group reveal">
-                <div class="about-photo-card">
-                    <img src="assets/design.png" alt="Placeholder 1">
+            <!-- Group 5: [Photo Left] - [Text Right] -->
+            <div class="about-group">
+                <div class="about-photo-card" data-aos="fade-right">
+                    <img src="assets/design.png" alt="Apparel Design" onerror="this.src='https://via.placeholder.com/600x400?text=Apparel+Design';">
                 </div>
-                <div class="about-desc">
+                <div class="about-desc" data-aos="fade-left">
                     <h3>Apparel & Sportswear Design</h3>
                     <p>
                         Design isn't just for screens; it's for identity. I have extensive experience designing custom jersey layouts and apparel branding for teams and organizations. I understand the technical nuances of sublimation printing and textile layout, ensuring that every uniform I design creates a strong, cohesive visual identity.
@@ -139,11 +141,12 @@
                 </div>
             </div>
 
-            <div class="about-group reveal">
-                <div class="about-photo-card">
-                    <img src="assets/mirror.png" alt="Placeholder 2">
+            <!-- Group 6: [Text Left] - [Photo Right] -->
+            <div class="about-group">
+                <div class="about-photo-card" data-aos="fade-left">
+                    <img src="assets/mirror.png" alt="Web Dev Project" onerror="this.src='https://via.placeholder.com/600x400?text=Web+Dev';">
                 </div>
-                <div class="about-desc">
+                <div class="about-desc" data-aos="fade-right">
                     <h3>Creative Web Development</h3>
                     <p>
                         I build the infrastructure that powers digital experiences. My approach to web development merges clean, efficient code with intuitive user interfaces. From responsive layouts to dynamic functionality, I focus on creating websites that are visually engaging, highly functional, and user-friendly.
@@ -157,9 +160,9 @@
     <!-- Skills Section -->
     <section id="skills">
         <div class="container">
-            <h2 class="section-title reveal">My Skills</h2>
+            <h2 class="section-title" data-aos="fade-up">My Skills</h2>
             <div class="skills-grid">
-                <div class="skill-category reveal">
+                <div class="skill-category" data-aos="zoom-in" data-aos-delay="100">
                     <h3>Languages & Frameworks</h3>
                     <div class="tags">
                         <span class="tag">HTML5</span>
@@ -170,7 +173,7 @@
                     </div>
                 </div>
 
-                <div class="skill-category reveal">
+                <div class="skill-category" data-aos="zoom-in" data-aos-delay="200">
                     <h3>Tools</h3>
                     <div class="tags">
                         <span class="tag">Git & GitHub</span>
@@ -181,7 +184,7 @@
                     </div>
                 </div>
 
-                <div class="skill-category reveal">
+                <div class="skill-category" data-aos="zoom-in" data-aos-delay="300">
                     <h3>Soft Skills</h3>
                     <div class="tags">
                         <span class="tag">Team Collaboration</span>
@@ -191,7 +194,7 @@
                     </div>
                 </div>
 
-                <div class="skill-category reveal">
+                <div class="skill-category" data-aos="zoom-in" data-aos-delay="400">
                     <h3>Technical Areas</h3>
                     <div class="tags">
                         <span class="tag">Web Development</span>
@@ -207,11 +210,11 @@
     <!-- Projects Section -->
     <section id="projects">
         <div class="container">
-            <h2 class="section-title reveal">First Year Projects</h2>
+            <h2 class="section-title" data-aos="fade-up">First Year Projects</h2>
             <div class="projects-wrapper">
                 
                 <!-- Project 1 -->
-                <div class="project-card reveal">
+                <div class="project-card" data-aos="flip-left" data-aos-duration="1000">
                     <div class="project-thumb">
                         <i class="fas fa-calculator"></i>
                     </div>
@@ -226,7 +229,7 @@
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card reveal">
+                <div class="project-card" data-aos="flip-right" data-aos-duration="1000">
                     <div class="project-thumb">
                         <i class="fas fa-list-check"></i>
                     </div>
@@ -247,10 +250,10 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title reveal">Get In Touch</h2>
-            <div class="contact-container reveal">
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <div class="contact-container">
                 
-                <div class="contact-info">
+                <div class="contact-info" data-aos="fade-right">
                     <p style="margin-bottom: 20px; color: var(--text-muted);">
                         Feel free to reach out for collaborations or just a friendly hello!
                     </p>
@@ -270,7 +273,7 @@
                     </div>
                 </div>
 
-                <div class="contact-form">
+                <div class="contact-form" data-aos="fade-left">
                     <form onsubmit="event.preventDefault(); alert('Message sent! (Demo only)');">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Your Name" required>
@@ -293,8 +296,9 @@
         <p>&copy; 2024 IT Student Portfolio. Crafted with <i class="fas fa-code" style="color: var(--accent);"></i> and Coffee.</p>
     </footer>
 
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Link to External JS -->
     <script src="js/script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>

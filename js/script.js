@@ -1,4 +1,9 @@
-AOS.init();
+// --- Initialize AOS (Animate On Scroll) ---
+AOS.init({
+    once: true, // Animations happen only once - while scrolling down
+    offset: 100, // Offset (in px) from the original trigger point
+    duration: 800, // Duration of animation (in ms)
+});
 
 // --- Dark Mode Logic with localStorage ---
 const toggleBtn = document.getElementById('theme-toggle');
@@ -53,22 +58,6 @@ function closeMenu() {
         navLinks.classList.remove('active');
     }
 }
-
-// --- Animate on Scroll (Intersection Observer) ---
-const observerOptions = {
-    threshold: 0.15 
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        }
-    });
-}, observerOptions);
-
-const revealElements = document.querySelectorAll('.reveal');
-revealElements.forEach(el => observer.observe(el));
 
 // --- 3D Perspective Tilt Effect ---
 const tiltContainer = document.querySelector('.tilt-box');
